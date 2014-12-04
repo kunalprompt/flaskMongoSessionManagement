@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>login test 3</title>
+</head>
+<body>
+
+  <h1>Home Page</h1>
+
+  {% if user.is_anonymous() %}
+
+  <p>Hello, world!</p>
+  <p>Not yet a user?</p>
+  <p>Sign up <a href="/signup">here</a></p>
+  <p>Already a user?</p>
+  <p>Log in <a href="/login">here</a></p>
+
+  {% else %}
+
+  <p>Hello, {{ user.username }}!</p>
+  <p>If you want to you can <a href="/logout">logout here</a></p>
+
+  {% endif %}
+
+</body>
+</html>

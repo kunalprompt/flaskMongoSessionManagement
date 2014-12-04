@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sign Up!</title>
+</head>
+<body>
+  <h1>Create a new User!</h1>
+  <p>Sign up here!</p>
+  <hr>
+  {% from "_formhelpers.html" import render_field %}
+  <form method="POST" action="/signup">
+    <dl>
+      {{ render_field(form.username) }}
+      {{ render_field(form.first_name) }}
+      {{ render_field(form.last_name) }}
+      {{ render_field(form.email) }}
+      {{ render_field(form.password) }}
+      {{ render_field(form.confirm) }}
+    </dl>
+    <p><input type="submit" value="SignUp">
+  </form>
+  <p>Already a user?</p>
+  <p>Log in <a href="/login">here</a></p>
+</body>
+</html>
