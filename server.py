@@ -18,7 +18,7 @@ from flask.ext.login import LoginManager
 
 #app secret key, also used as csrf_token
 #CSRF_ENABLED = True
-SECRET_KEY = "^!rtualt90"
+SECRET_KEY = "my-secret"
 
 app = Flask(__name__,
 	static_folder="static",
